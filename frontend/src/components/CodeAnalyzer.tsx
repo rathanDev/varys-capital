@@ -29,7 +29,6 @@ const CodeAnalyzer = () => {
 
   const doPost = (payload: any) => {
     const url = `${config.baseUrl}/analyze`;
-    console.log(url)
     axios.post<Result>(url, payload)
       .then(response => {
         const { data } = response;
